@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Albums Page</title>
+	<link rel="stylesheet" type="text/css" href="/static/album.css">
+	<style>
+	body {
+		margin: 0;
+		padding: 0;
+		background: #000;
+	}
+
+	video#bg-video {
+		position: fixed;
+		top: 0;
+		left: 0;
+		min-width: 100%;
+		min-height: 100%;
+		z-index: -1;
+	}
+	header {
+     background-color: #333;
+     color: #fff;
+     padding: 10px;
+   }
+   
+   nav {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+   }
+   
+   nav ul {
+     list-style: none;
+     margin: 0;
+     padding: 0;
+     display: flex;
+   }
+   
+   nav li {
+     margin: 0 10px;
+   }
+   
+   nav a {
+     color: #fff;
+     text-decoration: none;
+   }
+
+	</style>
+</head>
+<body>
+	<video id="bg-video" autoplay loop muted>
+		<source src="/static/bg2.mp4" type="video/mp4">
+	</video>
+	<header>
+		<nav>
+		  <ul>
+		    <li><a href="/">Home</a></li>
+		    <li><a href="/als"  style="color: burlywood;">Albums</a></li>
+		    <li><a href="/alb">Artists</a></li>
+			<li><a href="/playlist">Playlist</a></li>
+		    <li><a href="/abo" >Aboutus</a></li>
+		  </ul>
+		</nav>
+	   </header>
+	<main>
+		<section class="album-section">
+			<div class="album-info">
+				<div class="album-image">
+					<img src="/static/playlist1.jpg">
+				</div>
+				<div class="album-actions">
+					<button class="like-btn">Like</button>
+					<button class="comment-btn">Comment</button>
+				</div>
+			</div>
+			<div class="song-list">
+				<ul>
+					<li class="song">
+						<div class="song-details">
+							<img src="/static/a1s1.jpg" width="50px" height="50px">
+							<h3>Aa Antey Amalapuram</h3><button class="add-to-playlist">Add to playlist</button>
+
+						</div>
+                              <audio controls>
+                                   <source src="/static/a1m1.mp3" type="audio/mpeg">
+                              </audio>&nbsp;&nbsp;&nbsp;
+							  <p><strong>4:27</strong></p>
+						<div class="song-actions">
+							<button class="heat-btn">Heart</button>
+						</div>
+					</li>
+					<li class="song">
+						<div class="song-details">
+							<img src="/static/a1s2.jpg">
+							<h3>Pakka Local (Janatha Garage)</h3><button class="add-to-playlist">Add to playlist</button>
+
+						</div>
+                              <audio controls>
+                                   <source src="/static/a1m22.mp3" type="audio/mpeg">
+                              </audio>&nbsp;&nbsp;&nbsp;
+							  <p><strong>4:19</strong></p>
+						<div class="song-actions">
+							<button class="heat-btn">Heat</button>
+						</div>
+					</li>
+					<li class="song">
+						<div class="song-details">
+							<img src="/static/a1s3.png">
+							<h3>Kevvu Keka (Gabbar Singh)</h3><button class="add-to-playlist">Add to playlist</button>
+
+						</div>
+                              <audio controls>
+                                   <source src="/static/a1m3.mp3" type="audio/mpeg">
+                              </audio>&nbsp;&nbsp;&nbsp;
+							  <p><strong>4:07</strong></p>
+						<div class="song-actions">
+							<button class="heat-btn">Heat</button>
+						</div>
+					</li>
+                         <li class="song">
+						<div class="song-details">
+							<img src="/static/a1s4.jpg">
+							<h3>Manohari (Baahubali)</h3><button class="add-to-playlist">Add to playlist</button>
+
+						</div>
+                              <audio controls>
+                                   <source src="/static/a1m4.mp3" type="audio/mpeg">
+                              </audio>&nbsp;&nbsp;&nbsp;
+							  <p><strong>3:34</strong></p>
+						<div class="song-actions">
+							<button class="heat-btn">Heat</button>
+						</div>
+					</li>
+                         <li class="song">
+						<div class="song-details">
+							<img src="/static/a1s5.jpg">
+							<h3>Ra Ra Rakkamma (VR)</h3><button class="add-to-playlist">Add to playlist</button>
+
+						</div>
+                              <audio controls>
+                                   <source src="/static/a1m2.mp3" type="audio/mpeg">
+                              </audio>&nbsp;&nbsp;&nbsp;
+							  <p><strong>3:38</strong></p>
+						<div class="song-actions">
+							<button class="heat-btn">Heat</button>
+						</div>
+					</li>
+				</ul>
+				<script>
+					const addToPlaylistButtons = document.querySelectorAll('.add-to-playlist');
+					addToPlaylistButtons.forEach((button) => {
+					  button.addEventListener('click', (event) => {
+						const songTitle = event.target.previousElementSibling.textContent.trim();
+						fetch(`/add-to-playlist?title=${songTitle}`);
+					  });
+					});
+				  </script>
+			</div>
+		</section>
+	</main>
+	
+	<footer>
+		<p>Copyright &copy; 2023, International Institute of Information Technology, Hyderabad. All rights reserved <a href="/abo" style="color : burlywood">Aboutus</a></p>
+	</footer>
+</body>
+</html>

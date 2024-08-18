@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Albums Section</title>
+    <link rel="stylesheet" href="/static/playlistpage.css" />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background: #000;
+      }
+
+      li:hover {
+     font-weight: 900;
+}
+  
+      video#bg-video {
+        position: fixed;
+        top: 0;
+        left: 0;
+        min-width: 100%;
+        min-height: 100%;
+        z-index: -1;
+      }
+      header {
+     background-color: #333;
+     color: #fff;
+     padding: 10px;
+   }
+   header {
+     background-color: #333;
+     color: #fff;
+     padding: 10px;
+   }
+   
+   nav {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+   }
+   
+   nav ul {
+     list-style: none;
+     margin: 0;
+     padding: 0;
+     display: flex;
+   }
+   
+   nav li {
+     margin: 0 10px;
+   }
+   
+   nav a {
+     color: #fff;
+     text-decoration: none;
+   }
+   li:hover {
+     font-weight: 900;
+}
+      
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+   }
+    </style>
+  </head>
+  <body>
+    <video id="bg-video" autoplay loop muted>
+      <source src="/static/bg5.mp4" type="video/mp4">
+    </video>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/v6">Search</a></li>
+          <li><a href="/als" style="color: burlywood;">Albums</a></li>
+          <li><a href="/alb">Artists</a></li>
+
+
+          <li><a href="/playlist">Playlist</a></li>
+          <li><a href="aboutus.html">Aboutus</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="album"><a href="/se1">
+        <img
+          src="/static/seca.jpeg"
+          alt="Album Cover"
+        />
+        <div class="info">
+          <h1>RRR</h1>
+        </div>
+        </a>
+      </div>
+      <div class="album"><a href="/se2">
+          <img
+            src="/static/secb.jpg"
+            alt="Album Cover"
+          />
+          <div class="info">
+            <h1>Dasara</h1>
+          </div>
+          </a>
+        </div>
+        <div class="album"><a href="/se3">
+          <img
+            src="/static/secc.jpg"
+            alt="Album Cover"
+          />
+          <div class="info">
+            <h1>Saaho</h1>
+          </div>
+        </div>
+        <div class="album"><a href="/se4">
+          <img
+            src="/static/secd.jpg"
+            alt="Album Cover"
+          />
+          <div class="info">
+            <h1>K.G.F. Chapter 2</h1>
+          </div>
+          </a>
+     </div>
+
+     <div class="album"><a href="/se5">
+          <img src="/static/sece.jpg" alt="/static/Album Cover"/>
+          <div class="info">
+            <h1>Kantara</h1>
+          </div>
+        </a>
+        </div>
+        <div class="album"><a href="/se6">
+          <img
+            src="/static/secf.jpg"
+            alt="Album Cover"
+          />
+          <div class="info">
+            <h1>Karthikeya 2</h1>
+          </div>
+          </a>
+     </div>
+
+    </main>
+
+    <footer>
+      <p>Copyright &copy; 2023, International Institute of Information Technology, Hyderabad. All rights reserved <a href="aboutus.html" style="color : burlywood">Aboutus</a></p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Albums Page</title>
+	<link rel="stylesheet" type="text/css" href="/static/albums(1).css">
+</head>
+<body style="background-image: url(/static/Music2.jpg);">
+	<header>
+		<div class="logo">
+			<img src="/static/logo.jpg">
+		</div>
+		<nav>
+			<ul>
+				<li><a href="/v6">Search Page</a></li>
+				<li><a href="/">Home</a></li>
+				<li><a href="/als">Albums</a></li>
+				<li><a href="/alb" style="color: burlywood;">Artists</a></li>
+				<li><a href="/playlist">Playlist</a></li>
+				<li><a href="/abo">Aboutus</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<section class="album-section">
+			<div class="album-info">
+				<div class="album-image">
+					<img src="/static/08ilayaraja.jpg">
+				</div> 
+				<div class="album-actions">
+					<button class="like-btn">Like</button>
+					<button class="comment-btn">Comment</button>
+				</div>
+			</div>
+			<div class="song-list">
+				<ul>
+					<li class="song">
+						<div class="song-details">
+							<img src="/static/artist2.jpg">
+							<h3>Karigipoyanu</h3>
+							<button class="add-to-playlist">Add to playlist</button>
+
+							
+						</div>
+						<audio controls>
+							<source src="/home/Music/rajamusic1.mp3" type="audio/mpeg">
+						</audio>&nbsp;&nbsp;&nbsp;
+						<p><strong>4:39</strong></h2>
+						
+					</li>
+					<li class="song">
+						<div class="song-details">
+							<img src="/static/artist2.jpg">
+							<h3>Sumam Pratisumam</h3>
+							<button class="add-to-playlist">Add to playlist</button>
+
+						</div>
+						<audio controls>
+							<source src="/home/Music/rajamusic2.mp3" type="audio/mpeg">
+						</audio>&nbsp;&nbsp;&nbsp;
+						<p><strong>4:54</strong></h2>
+						
+					</li>
+					<li class="song">
+						<div class="song-details">
+							<img src="/static/artist2.jpg">
+							<h3>Gopilola</h3>
+							<button class="add-to-playlist">Add to playlist</button>
+
+						</div>
+						<audio controls>
+							<source src="/home/Music/rajamusic3.mp3" type="audio/mpeg">
+						</audio>&nbsp;&nbsp;&nbsp;
+						<p><strong>5:39</strong></h2>
+						
+					</li>
+                         <li class="song">
+						<div class="song-details">
+							<img src="/static/artist2.jpg">
+							<h3>Subhalekha</h3>
+							<button class="add-to-playlist">Add to playlist</button>
+
+						</div>
+							<audio controls>
+								<source src="/home/Music/rajamusic4.mp3" type="audio/mpeg">
+							</audio>&nbsp;&nbsp;&nbsp;
+							<p><strong>4:42</strong></h2>
+
+					</li>
+                         <li class="song">
+						<div class="song-details">
+							<img src="/static/artist2.jpg">
+							<h3>Priyatama</h3>
+							<button class="add-to-playlist">Add to playlist</button>
+
+						</div>
+						<audio controls>
+							<source src="/home/Music/rajamusic5.mp3" type="audio/mpeg">
+						</audio>&nbsp;&nbsp;&nbsp;
+						<p><strong>4:21</strong></h2>
+					</li>
+				</ul>
+				<script>
+					const addToPlaylistButtons = document.querySelectorAll('.add-to-playlist');
+					addToPlaylistButtons.forEach((button) => {
+					  button.addEventListener('click', (event) => {
+						const songTitle = event.target.previousElementSibling.textContent.trim();
+						fetch(`/add-to-playlist?title=${songTitle}`);
+					  });
+					});
+				  </script>
+			</div>
+		</section>
+	</main>
+	<footer>
+		<p>Copyright &copy; 2023, International Institute of Information Technology, Hyderabad. All rights reserved <a href="/abo" style="color : burlywood">Aboutus</a></p>
+	</footer>
+</body>
+</html>

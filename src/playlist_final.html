@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Playlist</title>
+    <link rel="stylesheet" type="text/css" href="/static/albums(1).css">
+  </head>
+  <body>
+    <h1>Playlist</h1>
+    <ul>
+      {% for song in songs %}
+      <li>{{ song }} <button class="remove" data-title="{{ song }}">Remove</button></li>
+      {% endfor %}
+    </ul> 
+    <script>
+      const removeButtons = document.querySelectorAll('.remove');
+removeButtons.forEach((button) => {
+  button.addEventListener('click', (event) => {
+    const songTitle = event.target.dataset.title.trim();
+    fetch(`/remove?title=${songTitle}`);
+    event.target.parentNode.remove();  // Remove the <li> element from the DOM
+  });
+});
+
+    </script>
+    <footer>
+      <p>Copyright &copy; 2023, International Institute of Information Technology, Hyderabad. All rights reserved <a href="/abo" style="color : burlywood">Aboutus</a></p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,13 @@
+<button class="add-to-playlist">Add to playlist</button>
+
+
+ <script>
+      const addToPlaylistButtons = document.querySelectorAll('.add-to-playlist');
+      addToPlaylistButtons.forEach((button) => {
+        button.addEventListener('click', (event) => {
+          const songTitle = event.target.previousElementSibling.textContent.trim();
+          fetch(`/add-to-playlist?title=${songTitle}`);
+        });
+      });
+    </script>
+

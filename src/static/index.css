@@ -1,0 +1,131 @@
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	background-image: url(finalbackground.gif);
+	background-size: 100%;
+	background-position: center;
+}
+
+#myvideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+}
+
+header {
+	background-color: rgba(0, 0, 0, 0.4);
+	color: #fff;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0px;
+}
+.headings{
+	color: rgb(231, 54, 136);
+	-webkit-text-stroke:1px #4e1d5a;
+}
+.shadow {
+    box-shadow: 4px 4px 4px #949393;
+}
+.name {
+	color: black;
+}
+.name:hover {
+	color: rgb(247, 174, 77);
+	-webkit-text-stroke: 1px #333;
+}
+nav form input[type="text"] {
+	border-radius: 20px;
+	padding: 3px;
+	font-size: 16px;
+}
+   
+nav form button[type="submit"] {
+	border-radius: 20px;
+	padding: 3px 10px;
+	background-color: #007bff;
+	color: #fff;
+	cursor: pointer;
+}
+   
+nav ul {
+	display: flex;
+	list-style: none;
+	margin: 0;
+	padding: 10px;
+}
+nav li {
+	margin: 0px 10px;
+}
+
+nav a {
+	color: #fff;
+	text-decoration: none;
+}
+
+.navbar {
+	align-self: center;
+	align-items: center;
+	align-content: center;
+}
+
+main {
+	margin: 20px;
+}
+
+.artists, .playlists {
+	margin-bottom: 20px;
+}
+
+h2 {
+	margin-bottom: 10px;
+}
+
+.artist {
+	display: inline-block;
+	margin: 0 10px;
+	text-align: center;
+	width: 30%;
+}
+
+.playlist {
+    display: inline-block;
+	margin: 0 10px;
+	text-align: center;
+	width: 30%;
+}
+.artist img, .playlist img {
+	height: 180px;
+	width: 180px;
+	object-fit: cover;
+	margin-bottom: 10px;
+    border: 10px solid #ffa31a;
+    border-radius: 30%;
+    transition: all 0.5s;
+}
+.artist img:hover {
+	transform: scale(1.1);
+	box-shadow: 8px 8px 8px #646464
+}
+.playlist img:hover {
+	transform: scale(1.1);
+	box-shadow: 8px 8px 8px #5e5e5e
+}
+.artist h3, .playlist h3 {
+	margin: 0;
+	font-size: 1.2em;
+}
+
+footer {
+	background-color: #333;
+	color: #fff;
+	padding: 10px;
+	text-align: center;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+}

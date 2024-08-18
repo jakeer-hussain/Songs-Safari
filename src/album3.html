@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Albums Page</title>
+	<link rel="stylesheet" type="text/css" href="/static/album.css">
+     <style>
+		body {
+			margin: 0;
+			padding: 0;
+			background: #000;
+		}
+
+		video#bg-video {
+			position : fixed;
+			top: 0;
+			left: 0;
+			min-width: 90%;
+			min-height: 90%;
+			z-index: -1;
+		}
+	</style>
+</head>
+<body>
+     <video id="bg-video" autoplay loop muted>
+		<source src="/static/bg3.mp4" type="video/mp4">
+	</video>
+	<header>
+		<div class="logo">
+			<img src="/static/logo.jpg" style="border-radius: 30%;">
+		</div>
+		<nav>
+			<ul>
+				<li><a href="/">Home</a></li>
+		    <li><a href="/als" style="color: burlywood;">Albums</a></li>
+		    <li><a href="/alb" >Artists</a></li>
+			<li><a href="/playlist">Playlist</a></li>
+		    <li><a href="/abo" >Aboutus</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<section class="album-section">
+			<div class="album-info">
+				<div class="album-image">
+					<img src="/static/playlist3.jpg">
+				</div>
+				<div class="album-actions">
+					<button class="like-btn">Like</button>
+					<button class="comment-btn">Comment</button>
+				</div>
+			</div>
+			<div class="song-list">
+				<ul>
+					<li class="song">
+						<div class="song-details">
+							<img src="/static/a3s1.jpeg" width="50px" height="50px">
+							<h3>Industry Baby</h3>
+						</div>
+                              <audio controls>
+                                   <source src="/static/a3m1.mp3" type="audio/mpeg">
+                              </audio>
+						<div class="song-actions">
+							<button class="heat-btn">Heart</button>
+						</div>
+					</li>
+					<li class="song">
+						<div class="song-details">
+							<img src="/static/a3s2.webp">
+							<h3>Cheap Thrills</h3>
+						</div>
+                              <audio controls>
+                                   <source src="/static/a3m2.mp3" type="audio/mpeg">
+                              </audio>
+						<div class="song-actions">
+							<button class="heat-btn">Heat</button>
+						</div>
+					</li>
+					<li class="song">
+						<div class="song-details">
+							<img src="/static/a3s3.jpg">
+							<h3>Baby Baby</h3>
+						</div>
+                              <audio controls>
+                                   <source src="/static/a3m3.mp3" type="audio/mpeg">
+                              </audio>
+						<div class="song-actions">
+							<button class="heat-btn">Heat</button>
+						</div>
+					</li>
+                         <li class="song">
+						<div class="song-details">
+							<img src="/static/a3s4.jpg">
+							<h3> Bones</h3>
+						</div>
+                              <audio controls>
+                                   <source src="/static/a3m4.mp3" type="audio/mpeg">
+                              </audio>
+						<div class="song-actions">
+							<button class="heat-btn">Heat</button>
+						</div>
+					</li>
+                         <li class="song">
+						<div class="song-details">
+							<img src="/static/a3s5.jpg">
+							<h3>Faded</h3>
+						</div>
+                              <audio controls>
+                                   <source src="/static/a3m5.mp3" type="audio/mpeg">
+                              </audio>
+						<div class="song-actions">
+							<button class="heat-btn">Heat</button>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</section>
+	</main>
+	<footer>
+		<p>Copyright &copy; 2023, International Institute of Information Technology, Hyderabad. All rights reserved <a href="/abo" style="color : burlywood">Aboutus</a></p>
+	</footer>
+</body>
+</html>

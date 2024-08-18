@@ -1,0 +1,161 @@
+
+     body {
+     margin: 0;
+     padding: 0;
+     font-family: Arial, sans-serif;
+     background: url(background.jpg) no-repeat center center fixed;
+     background-size: cover;
+     }
+     
+     header {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     height: 80px;
+     padding: 0 40px;
+     background-color: rgba(164, 66, 66, 0.5);
+     }
+     
+     nav ul {
+     list-style: none;
+     margin: 0;
+     padding: 0;
+     display: flex;
+     }
+     
+     nav li {
+     margin: 0 10px;
+     }
+     
+     nav a {
+     color: white;
+     text-decoration: none;
+     font-size: 18px;
+     padding: 5px;
+     }
+     
+     nav a:hover {
+     border-bottom: 2px solid rgb(152, 89, 37);
+     }
+     
+     .logo img {
+     height: 50px;
+     }
+     
+     .album-section {
+     display: flex;
+     margin: 80px 40px;
+     background-color: rgba(228, 213, 164, 0.6);
+     border-radius: 20px;
+     box-shadow: 0 0 10px rgba(228, 216, 188, 0.6);
+     overflow: hidden;
+     }
+     
+     .album-info {
+     flex: 1;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     padding: 40px;
+     background-color: rgba(239, 216, 172, 0.5);
+     }
+     
+     .album-image img {
+     border-radius: 50%;
+     width: 400px;
+     height: 400px;
+     object-fit: cover;
+     object-position: center;
+     box-shadow: 10px 10px 10px rgba(166, 68, 68, 0.4);
+     }
+     img:hover {
+          transform: scale(1.1);
+          box-shadow: 8px 8px 8px #646464
+     }
+     
+     .album-actions {
+     display: flex;
+     margin-top: 20px;
+     }
+     
+     .album-actions button {
+     background-color: #1DB954;
+     color: white;
+     border: none;
+     border-radius: 5px;
+     padding: 10px;
+     margin-right: 10px;
+     font-size: 16px;
+     cursor: pointer;
+     transition: all 0.2s;
+     }
+     
+     .album-actions button:hover {
+     background-color: #1ED760;
+     }
+     
+     .song-list {
+     flex: 2;
+     padding: 40px;
+     }
+     
+     .song {
+     display: flex;
+     margin-bottom: 20px;
+     padding-bottom: 20px;
+     border-bottom: 1px solid #CCCCCC;
+     }
+     
+     .song:last-child {
+     margin-bottom: 0;
+     padding-bottom: 0;
+     border-bottom: none;
+     }
+     
+     .song-details {
+     flex: 1;
+     display: flex;
+     align-items: center;
+     }
+     
+     .song-details img {
+     width: 50px;
+     height: 50px;
+     object-fit: cover;
+     object-position: center;
+     margin-right: 20px;
+     border-radius: 5px;
+     box-shadow: 0 0 5px rgba(117, 36, 36, 0.2);
+     }
+     
+     .song-details h3 {
+     margin: 0;
+     font-size: 18px;
+     }
+     
+     .song-details p {
+     margin: 0;
+     color: #888888;
+     }
+     
+     .song-actions {
+     display: flex;
+     align-items: center;
+     }
+     
+     .heat-btn {
+     background-color: transparent;
+     color: #888888;
+     border: none;
+     }
+     footer {
+          background-color: #333;
+          color: #fff;
+          padding: 10px;
+          text-align: center;
+          position: fixed;
+          left: 0;
+          bottom: 0;
+          width: 100%;
+     }

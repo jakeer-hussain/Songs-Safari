@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Music Search</title>
+	<link rel="stylesheet" href="/static/ver6.css">
+	<link rel="stylesheet" type="text/css" href="/static/albums(1).css">
+     <style>
+header {
+	background-color: rgba(0, 0, 0, 0.4);
+	color: #fff;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0px;
+}
+
+li:hover {
+     font-weight: 900;
+}
+.headings{
+	color: rgb(231, 54, 136);
+	-webkit-text-stroke:1px #4e1d5a;
+}
+.shadow {
+    box-shadow: 4px 4px 4px #949393;
+}
+.name {
+	color: black;
+}
+.name:hover {
+	color: rgb(247, 174, 77);
+	-webkit-text-stroke: 1px #333;
+}
+nav form input[type="text"] {
+	border-radius: 20px;
+	padding: 3px;
+	font-size: 16px;
+}
+   
+nav form button[type="submit"] {
+	border-radius: 20px;
+	padding: 3px 10px;
+	background-color: #007bff;
+	color: #fff;
+	cursor: pointer;
+}
+   
+nav ul {
+	display: flex;
+	list-style: none;
+	margin: 0;
+	padding: 10px;
+}
+nav li {
+	margin: 0px 10px;
+}
+
+nav a {
+	color: #fff;
+	text-decoration: none;
+}
+
+.navbar {
+	align-self: center;
+	align-items: center;
+	align-content: center;
+}
+
+     </style>
+</head>
+<body>
+     <video autoplay muted loop>
+		<source src="/static/bg1.mp4" type="video/mp4">
+	</video>
+     <div style="background-color: #333;">
+     <nav class="navbar">
+		<ul>
+			<li><a href="/v6" style="color : palevioletred"> Search Page &emsp14;&emsp14;</a></li>
+			<li><a href="/">HOME &emsp; &emsp;</a></li>
+			<li><a href="/alb">Artists &emsp; &emsp;</a></li>
+			<li><a href="/als">Albums &emsp; &emsp;</a></li>
+			<li><a href="/abo">About US &emsp; &emsp;</a></li>
+
+			<li><a href="/playlist">Playlist</a></li>
+		</ul>
+	</nav>
+     </div>
+	<h1 style="color : white">
+          Sound Safari
+     </h1>
+     <div class="padd">
+     <div class="changeanything">
+     <div id="forms">
+          <center>
+	<form>
+		<!-- <label for="search">Search here : </label> -->
+		<input type="text" id="search" name="search" placeholder="Explore the beauty of music ...">
+		<button type="submit">Search</button>
+	</form>
+     <div id="filters">
+          <label for="start-duration">Start Duration:</label>
+          <input type="number" id="start-duration" name="start-duration">min &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+          <label for="end-duration">End Duration:</label>
+          <input type="number" id="end-duration" name="end-duration">min &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+          <label for="explicit">Explicit:</label>
+          <input type="checkbox" id="explicit" name="explicit">
+     </div>
+          </center>
+     </div>
+     </div>
+     </div>
+	<div id="results"></div>
+	<script src="/static/ver6.js"></script>
+	<footer>
+		<p>Copyright &copy; 2023, International Institute of Information Technology, Hyderabad. All rights reserved <a href="/abo" style="color : burlywood">Aboutus</a></p>
+	</footer>
+</body>
+</html>

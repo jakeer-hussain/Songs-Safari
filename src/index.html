@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Music Website</title>
+	<title>Sound Safari</title>
+	<link rel="stylesheet" href="/static/index.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			background: #000;
+		}
+
+		li:hover {
+     font-weight: 900;
+}
+	
+		video#bg-video {
+			position: fixed;
+			top: 0;
+			left: 0;
+			min-width: 100%;
+			min-height: 100%;
+			z-index: -1;
+		}
+		.container {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		.box {
+			width: 400px;
+			height: 500px;
+			background-color: #d275b6b0;
+			border: 2px solid black;
+			border-radius: 10px;
+			padding: 10px;
+			transition: all 0.3s ease;
+		}
+
+
+		.song {
+			font-weight: bold;
+			margin-bottom: 5px;
+			transition: all 0.3s ease;
+		}
+
+		.song:hover {
+			transform: scale(1.05);
+		}
+		</style>
+</head>
+<body>
+	<video id="bg-video" autoplay loop muted>
+		<source src="/static/bg0.mp4" type="video/mp4">
+	</video>
+	<header>
+	<img src="/static/logo.jpg" height="50px" width="110px">
+	<nav class="navbar">
+		<ul>
+			<li><a href="/v6"> Search Page &emsp14;&emsp14;</a></li>
+			<li><a href="/"><div style="color : palevioletred">HOME</div> &emsp; &emsp;</a></li>
+			<li><a href="/alb">Artists &emsp; &emsp;</a></li>
+			<li><a href="/als">Albums &emsp; &emsp;</a></li>
+			<li><a href="/abo">About US &emsp; &emsp;</a></li>
+
+			<li><a href="/playlist">Playlist</a></li>
+			
+		</ul>
+	</nav>
+	</header>
+	<main>
+		<section class="Top songs">
+			<div class="headings"><h1>Top Songs</h1></div>
+			<div class="container">
+				<div class="box" style="background-image: url(/static/bgforTop.jpg);">
+					<h2>Top Telugu Songs</h2>
+					<div class="songs">
+						<div class="song">Natu Natu <div><audio controls></audio></div></div>
+						<div class="song">Chitti <div><audio controls></audio></div></div>
+						<div class="song">Darshana <div><audio controls></audio></div></div>
+						<div class="song">Naa pranam nuvve <div><audio controls></audio></div></div>
+						<div class="song">pilla raa <div><audio controls></audio></div></div>
+					</div>
+				</div>
+				<div class="box" style="background-image: url(/static/bgforTop.jpg);">
+					<h2>Top Hindi Songs</h2>
+					<div class="songs">
+						<div class="song"> Jhume jo pathaan <div><audio controls></audio></div></div>
+						<div class="song"> Kesariya thera <div><audio controls></audio></div></div>
+						<div class="song"> Oo Saathi <div><audio controls></audio></div></div>
+						<div class="song"> Rathe Lambiya <div><audio controls></audio></div></div>
+						<div class="song"> seetha ramam <div><audio controls></audio></div></div>
+					</div>
+				</div>
+				<div class="box" style="background-image: url(/static/bgforTop.jpg);">
+					<h2>Top English Songs</h2>
+					<div class="songs">
+						<div class="song">Beliver <div><audio controls></audio></div></div>
+						<div class="song">Imagine Dragons <div><audio controls></audio></div></div>
+						<div class="song">Waka Waka <div><audio controls></audio></div></div>
+						<div class="song">Avengers Assemble <div><audio controls></audio></div></div>
+						<div class="song">Despacito <div><audio controls></audio></div></div>
+					</div>
+				</div>
+				
+			</div>
+		</section>
+		<section class="artists">
+			<div class="headings"><h2 style="font-weight:900;">Featured Artists</h2></div>
+			<div class="artist">
+				<a href="/ravi">
+				<img src="/static/artist1.jpg" alt="Artist 1" class="shadow" class="image" style="width:300px;height:300px;">
+				</a>
+				<h2><span class="name">Ravi Shankar</span></h2>
+			</div>
+			<div class="artist">
+				<a href="/raja">
+				<img src="/static/artist2.jpg" alt="Artist 2" class="shadow" class="image" style="width:300px;height:300px;">
+				</a>
+				<h2><span class="name">Ilaiyaraaja</span></h2>
+			</div>
+			<div class="artist">
+				<a href="/spb">
+				<img src="/static/artist5.jpg" alt="Artist 3" class="shadow" class="image" style="width:300px;height:300px;">
+				</a>
+				<h2><span class="name">S. P. BalaSubramanyam</span></h2>
+			</div>
+            <!-- <div class="artist">
+				<a href="artist4.html">
+				<img src="artist4.jpg" alt="Artist 4" class="shadow">
+				</a>
+				<h3><span class="name">Sid Sriram</span></h3>
+			</div>
+			<div class="artist">
+				<a href="artist5.html">
+				<img src="artist5.jpg" alt="Artist 5" class="shadow">
+				</a>
+				<h3><span class="name">SPB</span></h3>
+			</div>
+			<div class="artist">
+				<a href="artist6.html">
+				<img src="artist6.jpg" alt="Artist 6" class="shadow">
+				</a>
+				<h3><span class="name">A R Rehman</span></h3>
+			</div> -->
+		</section>
+		<div class="headings"><h2 style="font-weight:900;">Popular Playlists</h2></div>
+		<section class="playlists">
+			<div class="playlist">
+				<a href="/ab1">
+				<img src="/static/playlist1.jpg" alt="Playlist 1" class="shadow" style="width:300px;height:300px;">
+				</a>
+				<h2><span class="name">Playlist 1</span></h2>
+			</div>
+			<div class="playlist">
+				<a href="/ab2">
+				<img src="/static/playlist2.jpg" alt="Playlist 2" class="shadow" style="width:300px;height:300px;">
+				</a>
+				<h2><span class="name">Playlist 2</span></h2>
+			</div>
+			<div class="playlist">
+				<a href="/ab3">
+				<img src="/static/playlist3.jpg" alt="Playlist 3" class="shadow" style="width:300px;height:300px;">
+				</a>
+				<h2><span class="name">Playlist 3</span></h2>
+			</div>
+			<!-- <div class="playlist">
+				<img src="playlist4.jpg" alt="Playlist 1" class="shadow">
+				<h3><span class="name">Playlist 4</span></h3>
+			</div>
+			<div class="playlist">
+				<img src="playlist5.jpg" alt="Playlist 2" class="shadow">
+				<h3><span class="name">Playlist 5</span></h3>
+			</div>
+			<div class="playlist">
+				<img src="playlist6.jpg" alt="Playlist 3" class="shadow">
+				<h3><span class="name">Playlist 6</span></h3>
+			</div> -->
+		</section>
+          <div class="headings"><h2 style="font-weight:900;">Albums</h2></div>
+		<section class="playlists">
+			<div class="playlist">
+				<a href="/se2">
+				<img src="/static/secb.jpg" alt="Dasara" class="shadow" style="width:300px;height:300px;">
+				</a>
+				<h2><span class="name">Dasara <br /> <br /> <br /></span></h2>
+			</div>
+			<div class="playlist">
+				<a href="/se1">
+				<img src="/static/seca.jpeg" alt="RRR" class="shadow" style="width:300px;height:300px;">
+				</a>
+				<h2><span class="name">RRR <br /> <br /> <br /></span></h2>
+			</div>
+			<div class="playlist">
+				<a href="/se4">
+				<img src="/static/secd.jpg" alt="KGF2" class="shadow" style="width:300px;height:300px;">
+			</a>
+				<h2><span class="name">KGF2 <br /> <br /> <br /></span></h2>
+			</div>
+		</section>
+	</main>
+	<footer>
+		<p>Copyright &copy; 2023, International Institute of Information Technology, Hyderabad. All rights reserved <a href="/abo" style="color : burlywood">Aboutus</a></p>
+	</footer>
+</body>
+</html>

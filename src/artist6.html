@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Albums Page</title>
+	<link rel="stylesheet" type="text/css" href="/static/albums(1).css">
+	<script src="/static/script.js"></script>
+	<style>
+		 th, td {
+              border: 1px solid #333333;
+              padding: 10px;
+              text-align: center;
+            }
+	</style>
+</head>
+<body style="background-image: url(/static/Music2.jpg);">
+	<header>
+		<div class="logo">
+			<img src="/static/logo.jpg">
+		</div>
+		<nav>
+			<ul>
+				<li><a href="/v6">Search Page</a></li>
+				<li><a href="/">Home</a></li>
+				<li><a href="/als">Albums</a></li>
+				<li><a href="alb" style="color: burlywood;">Artists</a></li>
+				<li><a href="/abo">Aboutus</a></li>
+
+				<li><a href="/playlist">Playlist</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<section class="album-section">
+			<div class="album-info">
+				<div class="album-image">
+					<img src="/static/A R Rehman.jpg">
+				</div>
+				<!-- <div class="album-actions">
+					<button class="like-btn">Like</button>
+					<button class="comment-btn">Comment</button>
+				</div> -->
+				<div>
+					<h2>Reviews</h2>
+			<form>
+			  <label for="name">Name:</label>
+			  <input type="text" id="name" name="name"><br><br>
+			  <label for="rating">Rating:</label>
+			  <input type="radio" id="rating1" name="rating" value="1">
+			  <label for="rating1">1</label>
+			  <input type="radio" id="rating2" name="rating" value="2">
+			  <label for="rating2">2</label>
+			  <input type="radio" id="rating3" name="rating" value="3">
+			  <label for="rating3">3</label>
+			  <input type="radio" id="rating4" name="rating" value="4">
+			  <label for="rating4">4</label>
+			  <input type="radio" id="rating5" name="rating" value="5">
+			  <label for="rating5">5</label><br><br>
+			  <label for="review">Review:</label><br>
+			  <textarea id="review" name="review" rows="4" cols="70"></textarea><br><br>
+			  <input type="button" value="Submit" onclick="addReview()">
+			</form>
+			<table id="reviewsTable" align="center" style="background-color:lightgreen">
+			  <tr>
+				<th>User Name</th>
+				<th>Rating</th>
+				<th>Review</th>
+			  </tr>
+			</table>
+				</div>
+			</div>
+			</div>
+			<div class="song-list">
+				<ul>
+					<li class="song">
+						<div class="song-details">
+							<img src="/static/artist6.jpg">
+							<h3>Vaalu Kanuladaanaa</h3>
+							<button class="add-to-playlist">Add to playlist</button>
+						</div>
+						<audio controls>
+							<source src="/home/Music/Rehmanmusic1.mp3" type="audio/mpeg">
+						</audio>&nbsp;&nbsp;&nbsp;
+						<p><strong>5:49</strong></h2>
+						
+					</li>
+					<li class="song">
+						<div class="song-details">
+							<img src="/static/artist6.jpg">
+							<h3>Yemi Cheyamanduve</h3>
+							<button class="add-to-playlist">Add to playlist</button>
+						</div>
+						<audio controls>
+							<source src="/home/Music/Rehmanmusic2.mp3" type="audio/mpeg">
+						</audio>&nbsp;&nbsp;&nbsp;
+						<p><strong>6:02</strong></h2>
+						
+					</li>
+					<li class="song">
+						<div class="song-details">
+							<img src="/static/artist6.jpg">
+							<h3>Palike Gorinka</h3>
+							<button class="add-to-playlist">Add to playlist</button>
+						</div>
+						<audio controls>
+							<source src="/home/Music/Rehmanmusic3.mp3" type="audio/mpeg">
+						</audio>&nbsp;&nbsp;&nbsp;
+						<p><strong>4:42</strong></h2>
+						
+					</li>
+                         <li class="song">
+						<div class="song-details">
+							<img src="/static/artist6.jpg">
+							<h3>Snehithudaa</h3>
+							<button class="add-to-playlist">Add to playlist</button>
+						</div>
+							<audio controls>
+								<source src="/home/Music/Rehmanmusic4.mp3" type="audio/mpeg">
+							</audio>&nbsp;&nbsp;&nbsp;
+							<p><strong>6:07</strong></h2>
+
+					</li>
+                         <li class="song">
+						<div class="song-details">
+							<img src="/static/artist6.jpg">
+							<h3>Mustafa Mustafa</h3>
+							<button class="add-to-playlist">Add to playlist</button>
+						</div>
+						<audio controls>
+							<source src="/home/Music/Rehmanmusic5.mp3" type="audio/mpeg">
+						</audio>&nbsp;&nbsp;&nbsp;
+						<p><strong>6:05</strong></h2>
+					</li>
+				</ul>
+				<script>
+					const addToPlaylistButtons = document.querySelectorAll('.add-to-playlist');
+					addToPlaylistButtons.forEach((button) => {
+					  button.addEventListener('click', (event) => {
+						const songTitle = event.target.previousElementSibling.textContent.trim();
+						fetch(`/add-to-playlist?title=${songTitle}`);
+					  });
+					});
+				  </script>
+			</div>
+			<div>
+				<h2><u>Upcoming Album</u></h2>
+				<h3>Album Name: New Album</h3>
+				<img src="/static/aralbum.jpg" height="250" width="350"> 
+				<h2>Countdown to Album Release:</h2>
+				<p id="demo"></p>
+			  </div>
+			  </div>
+						<!-- count down -->
+						<script>
+						  // count down 
+			
+					  // Set the release date to June 30th, 2023 at midnight
+					  var releaseDate = new Date("June 30, 2023 00:00:00").getTime();
+			
+					  // Update the countdown timer every second
+					  var x = setInterval(function () {
+			
+					  // Get the current date and time
+					  var now = new Date().getTime();
+			
+					  // Calculate the difference between the release date and the current date
+					  var distance = releaseDate - now;
+			
+					  // Calculate days, hours, minutes, and seconds remaining
+					  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+					  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+					  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+					  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+			
+					  // Display the countdown timer
+					  document.getElementById("demo").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+			
+					  // If the release date has passed, display a message
+					  if (distance < 0) {
+					  clearInterval(x);
+					  document.getElementById("demo").innerHTML = "Album Released!";
+					  }
+					  }, 1000);
+				  </script>
+				  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		</section>
+	</main>
+	<footer>
+		<p>Copyright &copy; 2023, International Institute of Information Technology, Hyderabad. All rights reserved <a href="/abo" style="color : burlywood">Aboutus</a></p>
+	</footer></body>
+</html>

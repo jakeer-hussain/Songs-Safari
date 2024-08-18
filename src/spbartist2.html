@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Albums Page</title>
+	<link rel="stylesheet" type="text/css" href="/static/albums(1).css">
+</head>
+<body style="background-image: url(/static/Music2.jpg);">
+	<header>
+		<div class="logo">
+			<img src="/static/logo.jpg">
+		</div>
+		<nav>
+			<ul>
+				<li><a href="/v6">Search Page</a></li>
+				<li><a href="/">Home</a></li>
+				<li><a href="/als">Albums</a></li>
+				<li><a href="/alb" style="color: burlywood;">Artists</a></li>
+				<li><a href="/playlist">Playlist</a></li>
+				<li><a href="/abo">Aboutus</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<section class="album-section">
+			<div class="album-info">
+				<div class="album-image">
+					<img src="/static/SPB.jpg">
+				</div>
+				<div class="album-actions">
+					<button class="like-btn">Like</button>
+					<button class="comment-btn">Comment</button>
+				</div>
+			</div>
+			<div class="song-list">
+				<ul>
+					<li class="song">
+						<div class="song-details">
+							<img src="/static/artist5.jpg">
+							<h3>Subha Lekha</h3>
+							<button class="add-to-playlist">Add to playlist</button>
+
+						</div>
+						<audio controls>
+							<source src="/home/Music/SPBmusic1.mp3" type="audio/mpeg">
+						</audio>&nbsp;&nbsp;&nbsp;
+						<p><strong>4:20</strong></h2>
+						
+					</li>
+					<li class="song">
+						<div class="song-details">
+							<img src="/static/artist5.jpg">
+							<h3>Abbanee</h3>
+							<button class="add-to-playlist">Add to playlist</button>
+ 
+						</div>
+						<audio controls>
+							<source src="/home/Music/SPBmusic2.mp3" type="audio/mpeg">
+						</audio>&nbsp;&nbsp;&nbsp;
+						<p><strong>4:56</strong></h2>
+						
+					</li>
+					<li class="song">
+						<div class="song-details">
+							<img src="/static/artist5.jpg">
+							<h3>Na Cheli Rojave</h3>
+							<button class="add-to-playlist">Add to playlist</button>
+
+						</div>
+						<audio controls>
+							<source src="/home/Music/SPBmusic3.mp3" type="audio/mpeg">
+						</audio>&nbsp;&nbsp;&nbsp;
+						<p><strong>5:14</strong></h2>
+						
+					</li>
+                         <li class="song">
+						<div class="song-details">
+							<img src="/static/artist5.jpg">
+							<h3>Manasu Palike</h3>
+							<button class="add-to-playlist">Add to playlist</button>
+
+						</div>
+							<audio controls>
+								<source src="/home/Music/SPBmusic4.mp3" type="audio/mpeg">
+							</audio>&nbsp;&nbsp;&nbsp;
+							<p><strong>5:51</strong></h2>
+
+					</li>
+                         <li class="song">
+						<div class="song-details">
+							<img src="/static/artist5.jpg">
+							<h3>Swapnavevedo</h3>
+							<button class="add-to-playlist">Add to playlist</button>
+
+						</div>
+						<audio controls>
+							<source src="/home/Music/SPBmusic5.mp3" type="audio/mpeg">
+						</audio>&nbsp;&nbsp;&nbsp;
+						<p><strong>4:31</strong></h2>
+					</li>
+				</ul>
+				<script>
+					const addToPlaylistButtons = document.querySelectorAll('.add-to-playlist');
+					addToPlaylistButtons.forEach((button) => {
+					  button.addEventListener('click', (event) => {
+						const songTitle = event.target.previousElementSibling.textContent.trim();
+						fetch(`/add-to-playlist?title=${songTitle}`);
+					  });
+					});
+				  </script>
+			</div>
+		</section>
+	</main>
+	<footer>
+		<p>Copyright &copy; 2023, International Institute of Information Technology, Hyderabad. All rights reserved</p>
+	</footer>
+</body>
+</html>

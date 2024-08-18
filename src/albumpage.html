@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Music Artists Section</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+    <style>
+      /* Set up basic styles for the page */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      li:hover {
+     font-weight: 900;
+}
+      
+      /* Style the header */
+      header {
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+      }
+      
+      /* Style the footer */
+      footer {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+      }
+      
+      /* Style the main section */
+      main {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 20px;
+      }
+      
+      /* Style each artist section */
+      .artist {
+        background-color: #f1f1f1;
+        border-radius: 20px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        margin-bottom: 20px;
+        overflow: hidden;
+        position: relative;
+        width: calc(33.33% - 20px);
+      }
+      
+      /* Style the artist image */
+      .artist img {
+        border-radius: 50%;
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        transition: all 0.3s ease;
+      }
+      
+      /* Enlarge the artist image and show a shadow when hovering over the artist section */
+      .artist:hover img {
+        box-shadow: 0 0 20px rgba(0,0,0,0.4);
+        transform: scale(1.1);
+      }
+      
+      /* Style the artist info */
+      .artist-info {
+        padding: 20px;
+      }
+      
+      /* Style the artist name */
+      .artist-name {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+      
+      /* Style the artist description */
+      .artist-description {
+        margin-bottom: 10px;
+      }
+      
+      /* Style the artist awards */
+      .artist-awards {
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img src="{{ url_for('static', filename='logo.jpg') }}" height="50px" width="110px">
+      <nav class="navbar">
+        <ul>
+          <li><a href="/"><div>HOME</div> &emsp; &emsp;</a></li>
+          <li><a href="/v6"><div>Search</div> &emsp; &emsp;</a></li>
+          <li><a href="/alb" style="color : palevioletred">Artists &emsp; &emsp;</a></li>
+          <li><a href="/als">Albums &emsp; &emsp;</a></li>
+          <li><a href="/playlist">Playlist &emsp;&emsp;</a></li>
+          <li><a href="/spotlite">Spotlite &emsp;&emsp;</a></li>
+          <li><a href="/abo">About US &emsp; &emsp;</a></li>
+        </ul>
+      </nav>
+      </header>
+    <main>
+      <div class="artist">
+        <a href="/ravi">
+        <img src="{{ url_for('static', filename='artist1.jpg') }}" alt="Artist 1" width="150px" height="150px"> </a>
+        <div class="artist-info">
+          <div class="artist-name">Ravi Shankar</div>
+          <div class="artist-description">
+               an Indian sitarist and composer. A sitar virtuoso, he became the world's best-known export of North Indian classical music in the second half of the 20th century, and influenced many musicians in India and throughout the world. Shankar was awarded India's highest civilian honour, the Bharat Ratna, in 1999.
+          </div>
+          <div class="artist-awards">Songs: 5</div>
+        </div>
+      </div>
+      <div class="artist">
+        <a href="/raja">
+          <img src="{{ url_for('static', filename='artist2.jpg') }}" alt="Artist 1" width="150px" height="150px"> </a>
+          <div class="artist-info">
+            <div class="artist-name">Ilaiyaraaja</div>
+            <div class="artist-description">
+               an Indian musician, composer, arranger, conductor, orchestrator, instrumentalist, lyricist and singer, popular for his works in Indian Cinema, prominently in Tamil & Telugu films. Reputed to be one of the most prolific Indian composers, in a career spanning over forty-five years, he has composed over 7,000 songs and provided film scores for over 1,000 films, apart from performing in over 20,000 concerts.
+            </div>
+            <div class="artist-awards">Songs: 5</div>
+          </div>
+        </div>
+        <div class="artist">
+          <a href="/ara">
+          <img src="/static/arijit-singh-1200.jpg" alt="Artist 1" width="150px" height="150px"></a>
+          <div class="artist-info">
+            <div class="artist-name">Arijith Singh</div>
+            <div class="artist-description">
+               an Indian singer and music composer. The recipient of several accolades including a National Film Award and six Filmfare Awards, he has recorded songs in several Indian languages. He is regarded as one of the best and the most versatile playback singers of this generation.
+            </div>
+            <div class="artist-awards">Songs: 5</div>
+          </div>
+        </div>
+        <div class="artist">
+          <a href="/sid">
+          <img src="/static/artist4.jpg" alt="Artist 1" width="150px" height="150px"></a>
+          <div class="artist-info">
+            <div class="artist-name">Sid Sri Ram</div>
+            <div class="artist-description">
+               an Indian Carnatic musician, music producer, playback singer, and songwriter raised in America. He is an R&B songwriter and has been working in the Tamil ,Telugu, Kannada, Malayalam, Hindi, Marathi and English music industry. He regularly collaborates with his sister Pallavi Sriram, a Bharatanatyam dancer, and music directors
+            </div>
+            <div class="artist-awards">Songs: 5</div>
+          </div>
+        </div>
+        <div class="artist">
+          <a href="/spb">
+          <img src="/static/artist5.jpg" alt="Artist 1" width="150px" height="150px"> </a>
+          <div class="artist-info">
+            <div class="artist-name">S P Balasubramanyam</div>
+            <div class="artist-description">
+               Sripathi Panditaradhyula Balasubrahmanyam (4 June 1946 - 25 September 2020), also referred to as SPB or SP Balu or Balu, was an Indian playback singer, television presenter, actor, music composer, dubbing artist, and film producer. He is widely regarded as one of the greatest Indian singers of all time. He predominently worked in Telugu, Tamil, Kannada, Malayalam, and Hindi films and sang in a total of 16 languages.
+            </div>
+            <div class="artist-awards">Songs: 5</div>
+          </div>
+        </div>
+      <div class="artist">
+        <a href="/static/artist6.html">
+        <img src="/static/artist6.jpg" alt="Artist 2" width="150px" height="150px"> </a>
+        <div class="artist-info">
+          <div class="artist-name">A R Rahman</div>
+          <div class="artist-description">
+               Allah Rakha Rahman ( born A. S. Dileep Kumar; 6 January 1967) is an Indian music composer, record producer, singer and songwriter, popular for his works in Indian cinema; predominantly in Tamil and Hindi films, with occasional forays in international cinema, as well as an arrangement of the 20th Century Studios fanfare for Star Studios. He is a winner of six National Film Awards, two Academy Awards, two Grammy Awards, a BAFTA Award, a Golden Globe Award, fifteen Filmfare Awards and seventeen Filmfare Awards South
+          </div>
+          <div class="artist-awards">Songs: 5</div>
+        </div>
+      </div>
+     </main>
+     <footer>
+      <p>Copyright &copy; 2023, International Institute of Information Technology, Hyderabad. All rights reserved <a href="/abo" style="color : burlywood">Aboutus</a></p>
+    </footer>
+</body>
+</html>
